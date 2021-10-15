@@ -18,6 +18,14 @@ struct TableItemSimple {
     let action: (() -> Void)
 }
 
+struct TableItemDescription {
+    let title: String
+    var description: String
+    let icon: UIImage?
+    let iconBg: UIColor
+    let action: (() -> Void)
+}
+
 struct TableItemSwitcher {
     let title: String
     let icon: UIImage?
@@ -29,6 +37,7 @@ struct TableItemSwitcher {
 enum TableItemType {
     case simple(item: TableItemSimple)
     case switcher(item: TableItemSwitcher)
+    case description(item: TableItemDescription)
 }
 
 final class TableController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -37,6 +46,7 @@ final class TableController: UIViewController, UITableViewDelegate, UITableViewD
         let table = UITableView(frame: .zero, style: UITableView.Style.grouped)
         table.register(TableItemCell.self, forCellReuseIdentifier: TableItemCell.identifier)
         table.register(TableItemCellSwitcher.self, forCellReuseIdentifier: TableItemCellSwitcher.identifier)
+        table.register(TableItemCellDescription.self, forCellReuseIdentifier: TableItemCellDescription.identifier)
         return table
     }()
     
@@ -58,13 +68,16 @@ final class TableController: UIViewController, UITableViewDelegate, UITableViewD
         // general
         items.append(TableCategorie(items: [
             .switcher(item: TableItemSwitcher(title: "Авиарежим", icon: UIImage(systemName: "airplane"), iconBg: .systemOrange, state: false) {
-                print("CLICK TEST")
+                print("CLICK")
+            }),
+            .description(item: TableItemDescription(title: "Wi-Fi", description: "Не подключено", icon: UIImage(systemName: "wifi"), iconBg: .systemBlue) {
+                print("CLICK")
             })
         ]))
         
         items.append(TableCategorie(items: [
             .simple(item: TableItemSimple(title: "Уведомления", icon: UIImage(systemName: "bell"), iconBg: .systemRed) {
-                print("CLICK TEST")
+                print("CLICK")
             })
         ]))
     }
@@ -109,11 +122,16 @@ final class TableController: UIViewController, UITableViewDelegate, UITableViewD
                     }
                 cell.configure(with: item)
                 return cell
+            case .description(item: let item):
+                guard let cell = tableView.dequeueReusableCell(
+                    withIdentifier: TableItemCellDescription.identifier,
+                    for: indexPath) as? TableItemCellDescription else {
+                        return UITableViewCell()
+                    }
+                cell.configure(with: item)
+                return cell
+            
         }
-        
-        
-        
-        
     }
     
     
@@ -124,6 +142,8 @@ final class TableController: UIViewController, UITableViewDelegate, UITableViewD
             case .simple(let item):
                 item.action()
             case .switcher(let item):
+                item.action()
+            case .description(let item):
                 item.action()
         }
     }
