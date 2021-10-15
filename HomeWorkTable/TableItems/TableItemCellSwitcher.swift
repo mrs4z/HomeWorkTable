@@ -1,15 +1,14 @@
 //
-//  TableItem.swift
+//  TableItemCellSwitcher.swift
 //  HomeWorkTable
 //
-//  Created by Александр Горденко on 14.10.2021.
+//  Created by Александр Горденко on 15.10.2021.
 //
-
 import UIKit
 
-class TableItemCell: UITableViewCell {
+class TableItemCellSwitcher: UITableViewCell {
     static var identifier: String {
-        return "TableItemCell"
+        return "TableItemCellSwitcher"
     }
     
     private let iconContainer: UIView = {
@@ -25,6 +24,11 @@ class TableItemCell: UITableViewCell {
         imageView.tintColor = .white
         imageView.contentMode = .scaleAspectFit
         return imageView
+    }()
+    
+    private let switchItem: UISwitch = {
+        let switcher = UISwitch()
+        return switcher
     }()
     
     private let title: UILabel = {
@@ -43,8 +47,9 @@ class TableItemCell: UITableViewCell {
         contentView.addSubview(title)
         contentView.addSubview(iconContainer)
         contentView.addSubview(iconView)
+        contentView.addSubview(switchItem)
         contentView.clipsToBounds =  true
-        accessoryType = .disclosureIndicator
+        
     }
     
     required init?(coder: NSCoder) {
@@ -65,6 +70,11 @@ class TableItemCell: UITableViewCell {
                              y: 0,
                              width: contentView.frame.size.width - 20 - iconContainer.frame.size.width,
                              height: contentView.frame.size.height)
+        switchItem.sizeToFit()
+        switchItem.frame = CGRect(x: contentView.frame.size.width - switchItem.frame.size.width - 15,
+                                  y: (contentView.frame.size.height - switchItem.frame.size.height) / 2,
+                                  width: switchItem.frame.size.width,
+                                  height: switchItem.frame.size.height)
     }
     
     override func prepareForReuse() {
@@ -73,12 +83,13 @@ class TableItemCell: UITableViewCell {
         iconView.image = nil
         title.text = nil
         iconContainer.backgroundColor = nil
+        switchItem.isOn = false
     }
     
-    public func configure(with item: TableItemSimple) {
+    public func configure(with item: TableItemSwitcher) {
         title.text = item.title
         iconView.image = item.icon
-        
         iconContainer.backgroundColor = item.iconBg
+        switchItem.isOn = item.state
     }
 }
