@@ -79,7 +79,6 @@ class TableItemCellSwitcher: UITableViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        
         iconView.image = nil
         title.text = nil
         iconContainer.backgroundColor = nil
