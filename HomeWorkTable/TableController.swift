@@ -7,6 +7,10 @@
 
 import UIKit
 
+struct TableCategorie {
+    let items: [TableItem]
+}
+
 struct TableItem {
     let title: String
     let icon: UIImage?
@@ -22,7 +26,7 @@ final class TableController: UIViewController, UITableViewDelegate, UITableViewD
         return table
     }()
     
-    var items = [TableItem]()
+    var items = [TableCategorie]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,11 +41,18 @@ final class TableController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func setUp() {
-        items = [
+        // general
+        items.append(TableCategorie(items: [
             TableItem(title: "Авиарежим", icon: UIImage(systemName: "airplane"), iconBg: .systemOrange) {
                 print("CLICK TEST")
             }
-        ]
+        ]))
+        
+        items.append(TableCategorie(items: [
+            TableItem(title: "Авиарежим", icon: UIImage(systemName: "airplane"), iconBg: .systemOrange) {
+                print("CLICK TEST")
+            }
+        ]))
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -55,12 +66,17 @@ final class TableController: UIViewController, UITableViewDelegate, UITableViewD
        tableView.frame = CGRect.init(origin: .zero, size: size)
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return items.count
     }
     
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return items[section].items.count
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let item = items[indexPath.row]
+        let item = items[indexPath.section].items[indexPath.row]
         guard let cell = tableView.dequeueReusableCell(
             withIdentifier: TableItemCell.identifier,
             for: indexPath) as? TableItemCell else {
@@ -74,7 +90,7 @@ final class TableController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let item = items[indexPath.row]
+        let item = items[indexPath.section].items[indexPath.row]
         item.action()
     }
 }
