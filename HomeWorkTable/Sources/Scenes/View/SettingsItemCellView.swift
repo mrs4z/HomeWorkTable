@@ -7,9 +7,9 @@
 
 import UIKit
 
-class TableItemCell: UITableViewCell {
+class SettingsItemCellView: UITableViewCell {
     static var identifier: String {
-        return "TableItemCell"
+        return "SettingsItemCellView"
     }
     
     private let iconContainer: UIView = {

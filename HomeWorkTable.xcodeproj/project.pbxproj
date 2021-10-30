@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F816DAD12718B0C000D3BC37 /* TableItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F816DAD02718B0C000D3BC37 /* TableItemCell.swift */; };
-		F816DAD52719619800D3BC37 /* TableItemCellSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F816DAD42719619800D3BC37 /* TableItemCellSwitcher.swift */; };
-		F816DAD727196E5700D3BC37 /* TableItemCellDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = F816DAD627196E5700D3BC37 /* TableItemCellDescription.swift */; };
-		F874174E271824AE00D444C8 /* TableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F874174D271824AE00D444C8 /* TableController.swift */; };
-		F8867C4127198D610029D569 /* TableCategorie.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8867C4027198D610029D569 /* TableCategorie.swift */; };
-		F8867C4327198D720029D569 /* TableItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8867C4227198D720029D569 /* TableItemModel.swift */; };
+		F816DAD12718B0C000D3BC37 /* SettingsItemCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F816DAD02718B0C000D3BC37 /* SettingsItemCellView.swift */; };
+		F816DAD52719619800D3BC37 /* SettingsItemCellSwitcherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F816DAD42719619800D3BC37 /* SettingsItemCellSwitcherView.swift */; };
+		F816DAD727196E5700D3BC37 /* SettingsItemCellDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F816DAD627196E5700D3BC37 /* SettingsItemCellDescriptionView.swift */; };
+		F832A03F272D315D0084C469 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F832A03E272D315D0084C469 /* SettingsView.swift */; };
+		F832A041272D31AA0084C469 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F832A040272D31AA0084C469 /* SettingsModel.swift */; };
+		F874174E271824AE00D444C8 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F874174D271824AE00D444C8 /* SettingsController.swift */; };
 		F8F4B480271806F600F2A7CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F4B47F271806F600F2A7CF /* AppDelegate.swift */; };
 		F8F4B484271806F600F2A7CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F4B483271806F600F2A7CF /* ViewController.swift */; };
 		F8F4B487271806F600F2A7CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8F4B485271806F600F2A7CF /* Main.storyboard */; };
@@ -21,12 +21,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F816DAD02718B0C000D3BC37 /* TableItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableItemCell.swift; sourceTree = "<group>"; };
-		F816DAD42719619800D3BC37 /* TableItemCellSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableItemCellSwitcher.swift; sourceTree = "<group>"; };
-		F816DAD627196E5700D3BC37 /* TableItemCellDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableItemCellDescription.swift; sourceTree = "<group>"; };
-		F874174D271824AE00D444C8 /* TableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableController.swift; sourceTree = "<group>"; };
-		F8867C4027198D610029D569 /* TableCategorie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCategorie.swift; sourceTree = "<group>"; };
-		F8867C4227198D720029D569 /* TableItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableItemModel.swift; sourceTree = "<group>"; };
+		F816DAD02718B0C000D3BC37 /* SettingsItemCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItemCellView.swift; sourceTree = "<group>"; };
+		F816DAD42719619800D3BC37 /* SettingsItemCellSwitcherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItemCellSwitcherView.swift; sourceTree = "<group>"; };
+		F816DAD627196E5700D3BC37 /* SettingsItemCellDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItemCellDescriptionView.swift; sourceTree = "<group>"; };
+		F832A03E272D315D0084C469 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		F832A040272D31AA0084C469 /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
+		F874174D271824AE00D444C8 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		F8F4B47C271806F600F2A7CF /* HomeWorkTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeWorkTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8F4B47F271806F600F2A7CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8F4B483271806F600F2A7CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,23 +47,70 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F816DACD2718AB3E00D3BC37 /* TableItems */ = {
+		F832A03B272D30D20084C469 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F816DAD02718B0C000D3BC37 /* TableItemCell.swift */,
-				F816DAD42719619800D3BC37 /* TableItemCellSwitcher.swift */,
-				F816DAD627196E5700D3BC37 /* TableItemCellDescription.swift */,
+				F832A040272D31AA0084C469 /* SettingsModel.swift */,
 			);
-			path = TableItems;
+			path = Model;
 			sourceTree = "<group>";
 		};
-		F8867C3E27198D460029D569 /* ModelItems */ = {
+		F832A03C272D30D90084C469 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F8867C4027198D610029D569 /* TableCategorie.swift */,
-				F8867C4227198D720029D569 /* TableItemModel.swift */,
+				F816DAD02718B0C000D3BC37 /* SettingsItemCellView.swift */,
+				F816DAD42719619800D3BC37 /* SettingsItemCellSwitcherView.swift */,
+				F816DAD627196E5700D3BC37 /* SettingsItemCellDescriptionView.swift */,
+				F832A03E272D315D0084C469 /* SettingsView.swift */,
 			);
-			path = ModelItems;
+			path = View;
+			sourceTree = "<group>";
+		};
+		F832A03D272D30DF0084C469 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F874174D271824AE00D444C8 /* SettingsController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F832A042272D607D0084C469 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F832A045272D60940084C469 /* Scenes */,
+				F832A044272D60910084C469 /* App */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		F832A043272D60850084C469 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F8F4B485271806F600F2A7CF /* Main.storyboard */,
+				F8F4B488271806F800F2A7CF /* Assets.xcassets */,
+				F8F4B48A271806F800F2A7CF /* LaunchScreen.storyboard */,
+				F8F4B48D271806F800F2A7CF /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F832A044272D60910084C469 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F8F4B47F271806F600F2A7CF /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F832A045272D60940084C469 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				F832A03D272D30DF0084C469 /* Controller */,
+				F832A03C272D30D90084C469 /* View */,
+				F832A03B272D30D20084C469 /* Model */,
+				F8F4B483271806F600F2A7CF /* ViewController.swift */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		F8F4B473271806F500F2A7CF = {
@@ -85,15 +132,8 @@
 		F8F4B47E271806F600F2A7CF /* HomeWorkTable */ = {
 			isa = PBXGroup;
 			children = (
-				F8867C3E27198D460029D569 /* ModelItems */,
-				F816DACD2718AB3E00D3BC37 /* TableItems */,
-				F8F4B47F271806F600F2A7CF /* AppDelegate.swift */,
-				F8F4B483271806F600F2A7CF /* ViewController.swift */,
-				F8F4B485271806F600F2A7CF /* Main.storyboard */,
-				F8F4B488271806F800F2A7CF /* Assets.xcassets */,
-				F8F4B48A271806F800F2A7CF /* LaunchScreen.storyboard */,
-				F8F4B48D271806F800F2A7CF /* Info.plist */,
-				F874174D271824AE00D444C8 /* TableController.swift */,
+				F832A043272D60850084C469 /* Resources */,
+				F832A042272D607D0084C469 /* Sources */,
 			);
 			path = HomeWorkTable;
 			sourceTree = "<group>";
@@ -169,14 +209,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F874174E271824AE00D444C8 /* TableController.swift in Sources */,
-				F816DAD12718B0C000D3BC37 /* TableItemCell.swift in Sources */,
-				F816DAD727196E5700D3BC37 /* TableItemCellDescription.swift in Sources */,
+				F874174E271824AE00D444C8 /* SettingsController.swift in Sources */,
+				F816DAD12718B0C000D3BC37 /* SettingsItemCellView.swift in Sources */,
+				F816DAD727196E5700D3BC37 /* SettingsItemCellDescriptionView.swift in Sources */,
 				F8F4B484271806F600F2A7CF /* ViewController.swift in Sources */,
-				F8867C4127198D610029D569 /* TableCategorie.swift in Sources */,
-				F816DAD52719619800D3BC37 /* TableItemCellSwitcher.swift in Sources */,
+				F832A041272D31AA0084C469 /* SettingsModel.swift in Sources */,
+				F832A03F272D315D0084C469 /* SettingsView.swift in Sources */,
+				F816DAD52719619800D3BC37 /* SettingsItemCellSwitcherView.swift in Sources */,
 				F8F4B480271806F600F2A7CF /* AppDelegate.swift in Sources */,
-				F8867C4327198D720029D569 /* TableItemModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,7 +367,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8R6U7LPYDY;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = HomeWorkTable/Info.plist;
+				INFOPLIST_FILE = HomeWorkTable/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -357,7 +397,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8R6U7LPYDY;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = HomeWorkTable/Info.plist;
+				INFOPLIST_FILE = HomeWorkTable/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
