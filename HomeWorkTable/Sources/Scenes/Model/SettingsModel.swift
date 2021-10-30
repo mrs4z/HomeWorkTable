@@ -1,11 +1,34 @@
 //
-//  TableCategorie.swift
+//  TableModel.swift
 //  HomeWorkTable
 //
-//  Created by Александр Горденко on 15.10.2021.
+//  Created by Александр Горденко on 30.10.2021.
 //
 
 import UIKit
+
+struct TableItemSimple {
+    let title: String
+    let icon: UIImage?
+    let iconBg: UIColor
+    let action: (() -> Void)
+}
+
+struct TableItemDescription {
+    let title: String
+    var description: String
+    let icon: UIImage?
+    let iconBg: UIColor
+    let action: (() -> Void)
+}
+
+struct TableItemSwitcher {
+    let title: String
+    let icon: UIImage?
+    let iconBg: UIColor
+    var state: Bool
+    let action: (() -> Void)
+}
 
 struct TableCategorie {
     let items: [TableItemType]
@@ -18,8 +41,8 @@ enum TableItemType {
     case description(item: TableItemDescription)
 }
 
-extension TableCategorie {
-    static func getItems() -> [TableCategorie] {
+class SettingsModel {
+    func getItems() -> [TableCategorie] {
         return [
             TableCategorie(items: [
                 .switcher(item: TableItemSwitcher(title: "Авиарежим", icon: UIImage(systemName: "airplane"), iconBg: .systemOrange, state: false) {

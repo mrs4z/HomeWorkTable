@@ -6,9 +6,9 @@
 //
 import UIKit
 
-class TableItemCellSwitcher: UITableViewCell {
+class SettingsItemCellSwitcherView: UITableViewCell {
     static var identifier: String {
-        return "TableItemCellSwitcher"
+        return "SettingsItemCellSwitcherView"
     }
     
     private let iconContainer: UIView = {

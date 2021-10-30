@@ -7,9 +7,9 @@
 
 import UIKit
 
-class TableItemCellDescription: UITableViewCell {
+class SettingsItemCellDescriptionView: UITableViewCell {
     static var identifier: String {
-        return "TableItemCellDescription"
+        return "SettingsItemCellDescriptionView"
     }
     
     private let iconContainer: UIView = {
